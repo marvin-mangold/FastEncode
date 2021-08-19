@@ -1,7 +1,7 @@
 # FastEncode
 - FastEncode is a Software to encode from (Hex, Bin, Dec, ASCII) to (Hex, Bin, Dec, ASCII)
 - by pressing the startbutton the live encoding is active
--to copy the output you need to stop the live encoding
+- to copy the output you need to stop the live encoding
 
 ![Example01](https://user-images.githubusercontent.com/10088323/130139209-24f25b83-02f6-479e-a35a-929d56060154.jpg)
 
