@@ -1,0 +1,4 @@
+# tkinter style theme: awthemes-9.5.0
+tkinter
+sys
+pathlib
