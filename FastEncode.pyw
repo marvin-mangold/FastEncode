@@ -141,11 +141,15 @@ class Mainscreen(ttk.Frame):
 
 def encoder(inputstring="", encodefrom=1, encodeto=1):
     inputstring = inputstring.strip()
+    inputstring = inputstring.replace("\n", " ")
     encodelist = inputstring.split(" ")
+
     # HEX to ASCII
     if encodefrom == 1 and encodeto == 4:
         for i in range(len(encodelist)):
             try:
+                if "16#" in encodelist[i]:
+                    encodelist[i] = encodelist[i][3:]
                 encodelist[i] = str(chr(int(encodelist[i], 16)))
             except Exception as errortext:
                 print(errortext)
@@ -162,6 +166,8 @@ def encoder(inputstring="", encodefrom=1, encodeto=1):
     elif encodefrom == 1 and encodeto == 2:
         for i in range(len(encodelist)):
             try:
+                if "16#" in encodelist[i]:
+                    encodelist[i] = encodelist[i][3:]
                 encodelist[i] = str(int(encodelist[i], 16))
             except Exception as errortext:
                 print(errortext)
@@ -178,6 +184,8 @@ def encoder(inputstring="", encodefrom=1, encodeto=1):
     elif encodefrom == 1 and encodeto == 3:
         for i in range(len(encodelist)):
             try:
+                if "16#" in encodelist[i]:
+                    encodelist[i] = encodelist[i][3:]
                 encodelist[i] = str(bin(int(encodelist[i], 16))[2:])
             except Exception as errortext:
                 print(errortext)
